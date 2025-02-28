@@ -2,156 +2,198 @@
 {% load custom_filters %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed - Web Dev</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles can go here */
-        .bg-opacity-90 {
-            background-color: rgba(31, 41, 55, 0.9); /* Custom opacity for navbar */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed - Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <!-- Correct Lucide icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Additional styles for prose and custom colors -->
+  <style>
+    *{
+      background-color: #0d1117;
+    }
+    /* Custom background color */
+    .bg-dark-github {
+      background-color: #0d1117;
+    }
+    
+    /* Prose styling for typography */
+    .prose {
+      max-width: none;
+      color: #9CA3AF;
+    }
+    .prose a {
+      color: #60A5FA;
+    }
+    .prose a:hover {
+      color: #93C5FD;
+    }
+    .prose p {
+      margin-bottom: 1.25em;
+    }
+  </style>
 </head>
-
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-90 backdrop-blur-md border-b border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-xl font-bold text-white">Ahmed</a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#about" class="text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">About</a>
-                        <a href="#skills" class="text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Skills</a>
-                        <a href="#projects" class="text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Projects</a>
-                        <a href="#contact" class="text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
+<body>
+  <div class="min-h-screen bg-dark-github text-gray-300">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <!-- Profile Header -->
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Sidebar -->
+        <div class="space-y-6 md:col-span-1">
+          <div class="space-y-4">
+            <img
+              src="https://imgs.search.brave.com/2fDoKLP5q-k7W6qjcgmxkHbhlFbEvG_awwcLfzLEFUw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2M4Lzk2/L2U5L2M4OTZlOTRh/MzI0MjM3MDA1MjNh/NjYwOGM5MjJhYWVm/LmpwZw"
+              alt="Profile photo"
+              width="300"
+              height="300"
+              class="rounded-xl"
+            />
+            <div>
+              <h1 class="text-2xl font-bold text-white">Ahmed </h1>
+              <p class="text-xl text-gray-400">Full Stack Developer</p>
             </div>
-        </div>
-    </nav>
+          </div>
 
-    <!-- Hero Section -->
-    <section class="pt-20 pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800 to-gray-900">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4">
-                Hi, I'm <span class="text-blue-500">Ahmed</span>
-            </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8">
-                Backend Developer & Student
-            </p>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out inline-block">
-                Get in Touch
+          <p class="text-sm leading-relaxed">
+            Passionate developer crafting digital experiences. Focused on building scalable and user-friendly
+            applications.
+          </p>
+
+          <button class="w-full px-4 py-2 text-sm border border-gray-700 rounded-md hover:border-gray-600 text-gray-300 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/lsahmed/" target="_blank">Connect With me</a>
+          </button>
+
+          <!-- Contact Links -->
+          <div class="space-y-2">
+            <a href="https://github.com/lsahmed" class="flex items-center gap-2 text-sm hover:text-white transition-colors" target="_blank">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>github.com/lsahmed</span>
             </a>
+            <a href="https://www.linkedin.com/in/lsahmed/" class="flex items-center gap-2 text-sm hover:text-white transition-colors" target="_blank">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              <span>linkedin.com/in/lsahmed</span>
+            </a>
+            <a href="mailto:md.ahmed701153@gmail.com" class="flex items-center gap-2 text-sm hover:text-white transition-colors" target="_blank">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>md.ahme..@gmail.com</span>
+            </a>
+            <a href="#" class="flex items-center gap-2 text-sm hover:text-white transition-colors">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span>lsahmed.tech</span>
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-extrabold text-white mb-4">About Me</h2>
-            <p class="text-gray-300 text-lg mb-6">
-                I'm a passionate web developer with a bit eye for frontend. I love creating logic, functions, and manage backends of websites. With a strong foundation in both databases and back-end technologies, I always want to bring ideas to life through code.
-            </p>
-            <p class="text-gray-300 text-lg">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while solving coding challenges.
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-8 text-center">My Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {% for skills in skillset %}
-                <div class="bg-gray-800 rounded-lg p-4 text-center">
-                    <p class="text-lg font-semibold text-blue-400">{{skills}}</p>
-                </div>
-                {% endfor %}
+        <!-- Main Content -->
+        <div class="space-y-12 md:col-span-2">
+          <!-- About -->
+          <section>
+            <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+              About
+            </h2>
+            <div class="prose prose-invert">
+              <p>
+                With over a year of experience in full-stack development, I specialize in building robust web
+                applications that solve real-world problems. My journey in tech started with a curiosity about how
+                things work on the internet, and that curiosity has evolved into a passion for creating elegant
+                solutions.
+              </p>
+              <p>
+                Currently working on exciting projects that push the boundaries of what's possible with modern web
+                technologies. Always eager to learn new things and contribute to the developer community.
+              </p>
             </div>
-        </div>
-    </section>
+          </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-12 text-center">My Projects</h2>
-
-        {% for project_data in project %}
-
-            <div class="mb-16 lg:mb-24">
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-                    <div class="w-full lg:w-1/2">
-                        <h3 class="text-2xl font-semibold text-white mb-4">{{project_data.title}}</h3>
-                        <p class="text-gray-300 mb-6">{{project_data.description}}</p>
-                        <div class="mb-6">
-                            <h4 class="text-lg font-semibold text-white mb-2">Technologies used:</h4>
-                            <ul class="list-disc list-inside text-gray-300">
-                                
-                                {% for tech in project_data.technologies|split:',' %}
-                                <li>{{tech}}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <a href="{{project_data.git}}" class="text-blue-400 hover:text-blue-300 inline-flex items-center" target="_blank">
-                            View Project <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5-5 5M6 12h12" /></svg>
-                        </a>
-                    </div>
-                    <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-                        <img src="{{project_data.img1}}" alt="E-commerce Platform screenshot 1" class="rounded-lg shadow-md" />
-                        <img src="{{project_data.img2}}" alt="E-commerce Platform screenshot 2" class="rounded-lg shadow-md" />
-                        <img src="{{project_data.img2}}" alt="E-commerce Platform screenshot 3" class="rounded-lg shadow-md" />
-                        <img src="/placeholder.svg?height=200&width=300" alt="" class="rounded-lg shadow-md" />
-                    </div>
+          <!-- Skills -->
+          <section>
+            <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+              Skills
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">Frontend</h3>
+                <div class="space-y-1 text-sm">
+                  <p>{{frontend}}</p>
                 </div>
+              </div>
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">Backend</h3>
+                <div class="space-y-1 text-sm">
+                  <p>{{backend}}</p>
+                </div>
+              </div>
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">Database</h3>
+                <div class="space-y-1 text-sm">
+                  <p>{{database}}</p>
+                </div>
+              </div>
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">DevOps</h3>
+                <div class="space-y-1 text-sm">
+                  <p>{{devops}}</p>
+                </div>
+              </div>
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">Tools</h3>
+                <div class="space-y-1 text-sm">
+                  <p>{{tools}}</p>
+                </div>
+              </div>
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <h3 class="text-white font-medium mb-2">Soft Skills</h3>
+                <div class="space-y-1 text-sm">
+                  <p>Problem Solving</p>
+                  <p>Communication</p>
+                  <p>Teamwork</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Featured Projects -->
+          <section>
+            <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              Featured Projects
+            </h2>
+            {% for project in projects %}
+            <div class="grid gap-4">
+              <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-white font-medium">{{project.title}}</h3>
+                  <a href="{{project.git}}" class="text-gray-400 hover:text-white" target="_blank">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
+                <p class="text-sm mb-4">
+                  {{project.description}}
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                  {% for tech in project.technologies|split:',' %}
+                  <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">{{tech}}</span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
             {% endfor %}
-            </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-extrabold text-white mb-8">Get in Touch</h2>
-            <p class="text-gray-300 text-lg mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:ardyop7@gmail.com" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">
-                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12v4m-4-4v4m4-4H8m4 0v-4M12 12v4m0-4H8m4 0v-4" /></svg>
-                    <span class="sr-only">Email</span>
-                </a>
-                <a href="https://github.com/lsahmed" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">
-                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.3.8-.7V19c-3.3.7-4.2-1.6-4.2-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.3-.9.1-.9.1-.9 1.4.1 2.2 1.5 2.2 1.5 1.2 2.1 3.3 1.5 4.1 1.1.1-.9.5-1.5.9-1.8-2.7-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.3 1.4-3.1-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4 1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.2 3.2.9.8 1.4 1.8 1.4 3.1 0 4.5-2.7 5.5-5.4 5.8.5.4.8 1.1.8 2.1v3.6c0 .4.2.8.8.7C20.6 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span class="sr-only">GitHub</span>
-                </a>                
-                <a href="https://www.linkedin.com/in/lsahmed/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">
-                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 11-12 0 6 6 0 0112 0zM12 12v8m0-8h-2m2 0h2" /></svg>
-                    <span class="sr-only">LinkedIn</span>
-                </a>
-            </div>
+          </section>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-8 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-300">© 2024 Ahmed. All rights reserved.</p>
-        </div>
-    </footer>
-
+  <script>
+    // Initialize Lucide icons when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
 </body>
-
 </html>

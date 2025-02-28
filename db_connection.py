@@ -12,9 +12,13 @@ db = client['portfolio']
 
 # <--- Skills Collection Management -->
 skills = db['skills']
+skillset = skills.find()
+print((skillset[1]['frontend']).split(","))
+
 # <-- projects Collection Management -->
-projects = db['projects']
-project = list(projects.find())
+raw_projects = db['projects']
+projects = list(raw_projects.find())
+
 # filter = {"_id":ObjectId('672790caff384ce856517e51')}
 # update = {
 #     "$set": {
