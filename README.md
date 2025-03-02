@@ -15,7 +15,6 @@ This repository contains the source code for my personal portfolio website, buil
 * Showcase of my projects 📂.
 * Information about my skills and experience 🧑‍💻.
 * Contact information 📧.
-* (Optional: Blog section, if implemented ✍️)
 
 ## Setup and Installation
 
